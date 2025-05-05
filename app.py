@@ -3,8 +3,8 @@ import requests
 from datetime import datetime
 import pandas as pd
 
-API_KEY = "0558c2884ac9dea3370946ce16241d63"
-AVWX_TOKEN = "QMtTG1WiTgspaT36o2Q1dpoDS0HrutpN0G0YhpROhwQ"
+API_KEY = st.secrets["API_KEY"]
+AVWX_TOKEN = st.secrets["AVWX_TOKEN"]
 
 @st.cache_data(show_spinner=False)
 def get_weather(city):
